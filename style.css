@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-primary-color);
+}
+main{
+    width: 100%;
+}
+main section{
+    width: 100%;
+    padding: var(--padding-2xl);
+    display: flex;
+    gap: var(--gutter-lg);
+}
+.btn{
+    padding: var(--padding-sm) var(--padding-lg);
+    border: none;
+    outline: none;
+    color: var(--text-active-color);
+    border-radius: var(--border-radius-md);
+    background-color: var(--bg-active-color);
+    cursor: pointer;
+}
+#reset-btn{
+    background-color: var(--bg-dangerous-color);
+    color: var(--text-primary-color);
+}
+#download-btn{
+
+    background-color: var(--bg-success-color);
+    color: var(--text-primary-color);
+}
+main section .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gutter-lg);
+    width: 70%;
+}
+main section .top{
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-lg);
+}
+main section .bottom{
+    background-color: var(--bg-primary-color);
+    width: 100%;
+    padding: var(--padding-2xl);
+    aspect-ratio: 5/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius-2xl);
+}
+main section .bottom .placeholder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gutter-md);
+    opacity: 0.6;
+    /* display:; */
+}
+main section .bottom .placeholder p{
+    font-size: var(--font-size-lg);
+}
+main section .bottom .placeholder i{
+    font-size: 10rem;
+}
+main section .bottom canvas{
+    /* background-color: red; */
+    max-width: 80%;
+    max-height: 80vh;
+    display: none;
+}
+main section .right{
+    width: 30%;
+    background-color: var( --bg-secondary-color);
+    padding: var(--padding-lg);
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-md);
+}
+main section .right .filter{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-sm);
+    margin-top: var(--gutter-lg);
+}
+main section .right .filters{
+    width: 100%;
+}
+main section .right .filters input{
+    width: 100%;
+    border-radius:var(--border-radius-md);
+    outline: none;
+    margin-top: var(--margin-sm);
+    appearance: none;
+}
+
+main section .right .filters input::-webkit-slider-runnable-track{
+    border-radius: 2px;
+    background-color: var(--bg-active-color);
+    height: 3px;
+}
+main section .right .filters input::-webkit-slider-thumb{
+    cursor: pointer;
+    background-color: red;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: -8.5px;
+}
+.presets{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter-sm);
+}
