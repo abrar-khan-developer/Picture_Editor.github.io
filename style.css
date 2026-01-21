@@ -16,6 +16,7 @@ main section{
     width: 100%;
     padding: var(--padding-2xl);
     display: flex;
+    flex-direction: column;
     gap: var(--gutter-lg);
 }
 .btn{
@@ -41,7 +42,7 @@ main section .left{
     flex-direction: column;
     align-items: center;
     gap: var(--gutter-lg);
-    width: 70%;
+    flex: 1;
 }
 main section .top{
     display: flex;
@@ -64,7 +65,6 @@ main section .bottom .placeholder{
     align-items: center;
     gap: var(--gutter-md);
     opacity: 0.6;
-    /* display:; */
 }
 main section .bottom .placeholder p{
     font-size: var(--font-size-lg);
@@ -73,13 +73,12 @@ main section .bottom .placeholder i{
     font-size: 10rem;
 }
 main section .bottom canvas{
-    /* background-color: red; */
-    max-width: 80%;
+    max-width: 100%;
     max-height: 80vh;
     display: none;
 }
 main section .right{
-    width: 30%;
+    flex: 1;
     background-color: var( --bg-secondary-color);
     padding: var(--padding-lg);
     border-radius: var(--border-radius-lg);
@@ -121,5 +120,37 @@ main section .right .filters input::-webkit-slider-thumb{
 .presets{
     display: flex;
     flex-wrap: wrap;
+    gap: var(--gutter-xl);
+    justify-content: center;
+}
+
+@media screen and (min-width:1150px) {
+    main section{
+        flex-direction: row;
+    }
+    main section .left{
+        flex: 3;
+    }
+    main section .right{
+        flex: 1;
+    }
+}
+
+@media screen and (max-width:500px) {
+    main section{
+    width: 100%;
+    padding: var(--padding-md);    
+
+    }
+    main section .top{
+    width: 100%;
+    justify-content: center;
     gap: var(--gutter-sm);
+    }
+    .btn{
+    padding: var(--padding-sm) var(--padding-md);
+    }
+    .presets{
+        gap: var(--gutter-md);
+    }
 }
